@@ -1,12 +1,21 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    
+
+}
+html{
+    font-size: 62.5%; /* 1rem = 10px */
 }
 
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --main-font-size: 1.6rem;
+
+
+    
 }
 
 .fa-solid {
@@ -16,6 +25,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .main-container {
@@ -23,6 +33,7 @@ body {
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+    border: 1px solid;
 }
 
 a {
@@ -32,7 +43,7 @@ a {
 
 .section-title {
     margin: 0;
-    font-size: 22px;
+    font-size: 2.2rem; /* 22px */
 }
 
 .card {
@@ -46,8 +57,8 @@ a {
     object-fit: cover;
 }
 
-.card-title {
-    font-size: 16px;
+.card-title { 
+    font-size: 1.6rem; /* 16px */
 }
 
 .euro {
@@ -124,6 +135,50 @@ li{
     list-style-type: none;
 }
 
+/****** header ***********/
+
+header{
+    width: 100%;
+    max-width: 1440px;
+    height: 79px;
+    font-size: var(--main-font-size);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.logo{
+    width: 61.09px;
+    height: 19px;
+    display: block;
+}
+nav{
+    width: 245px;
+    
+}
+ul{
+    display: flex;
+    justify-content: space-between; 
+    margin: auto;
+    padding: 0;
+}
+li{
+    box-sizing: border-box;
+    height: 35px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+li:hover{
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
+}
+
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -155,11 +210,11 @@ li{
     }
 
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 1.4rem; /* 14px */
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 1.3rem; /* 13px */
     }
 }
 
