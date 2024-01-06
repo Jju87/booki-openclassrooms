@@ -87,24 +87,24 @@ header{
     height: 19px;
     display: block;
 }
-nav{
+.header__nav{
     width: 245px;
     
 }
-ul{
+.header__nav ul{
     display: flex;
     justify-content: space-between; 
     margin: auto;
     padding: 0;
 }
-li{
+.header__nav li{
     box-sizing: border-box;
     height: 35px;
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
 }
-li:hover{
+.header__nav li:hover{
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
     cursor: pointer;
@@ -131,7 +131,6 @@ li:hover{
 
 .headline__title, .headline__text {
     margin: 0; /* Reset margin for h1 and p*/
-    text-wrap: nowrap;
 }
 
 /* Search Bar */
@@ -317,7 +316,8 @@ li:hover{
     font-size: 1.4rem;
 }
 .vertical-cards .card-rating {
-    margin-bottom: 5px;
+    margin:0;
+    font-size: 1.4rem;
 }
 
 .show-more-link{
@@ -373,6 +373,7 @@ li:hover{
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
+    font-size: 1.4rem;
 }
 
 li{
@@ -407,6 +408,10 @@ li{
 
 .big-activites-cards{
     width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    height: 439px;
 }
 
 .big-activites-cards img{
@@ -414,18 +419,46 @@ li{
     width: 100%;
     height: 380px;
     border-radius: 20px 20px 0px 0px;
-
 }
 
 .big-activites-cards .card-content{
-    padding: 20px;
-    height:20px;
+    padding: 20px 19px 20px 19px;
 }
 
 .big-activites-cards .card-title{
     margin:0;
 }
 
+/****** Activités ***********/
+
+footer{
+    width:100%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 35px;
+    
+}
+.footer-content{
+    width: 33.33%;
+    padding: 20px;
+}
+.footer-title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list{
+    padding: 0;
+}
+
+.footer-list li{
+    padding-left: 0;
+    margin-top: 15px;
+    font-size: var(--main-font-size);
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
