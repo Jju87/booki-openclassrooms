@@ -94,7 +94,7 @@ header{
 .header__nav ul{
     display: flex;
     justify-content: space-between; 
-    margin: auto;
+    margin: auto; /*Sets default margin to 0*/
     padding: 0;
 }
 
@@ -115,6 +115,7 @@ header{
 /****** Search Area ***********/
 
 .search-container{
+    width:100%;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -141,6 +142,8 @@ header{
 
 .search-form{
     display: flex;
+    position: relative;
+
 }
 
 .fa-location-dot{
@@ -150,8 +153,8 @@ header{
     color:black;
     background-color: var(--main-bg-color);
     width: 50px;
-    height: 49px;
-    border-radius: 15px 0 0 15px;
+    height: 50px;
+    border-radius: 14px 0 0 14px;
     font-size: 2.2rem;
 }
 
@@ -159,7 +162,8 @@ header{
     font-size: 1.8rem;
     font-weight: bold;
     text-align: center;
-    border: 1px solid var(--main-bg-color)
+    border: 1px solid var(--main-bg-color);
+    border-right: none;
 }
 
 .search-form__input::placeholder{
@@ -167,13 +171,19 @@ header{
     opacity: 1; /* Prevents default grey placeholder color on Firefox */
 }
 
-.search-form__btn{
+.search-form__btn{    
     border-radius: 0 15px 15px 0;
     background-color: var(--main-color);
     color: white;
     font-size: 1.8rem;
     font-weight: 700;
-    border: 1px solid var(--main-color)
+    line-height: 0%;
+    border: px solid var(--main-color)
+}
+
+.fa-magnifying-glass{
+    color: white;
+    display: none;
 }
 
 .search-form__btn:hover{
@@ -215,8 +225,8 @@ header{
     height: 50px;
     padding: 4px 19px;
     align-items: center;
-    align-items: center;
     gap: 10px;
+    background-color: #fff;
 }
 
 .filters__btn:hover{
@@ -227,20 +237,24 @@ header{
 
 .info-bar{
     display: flex;
-    gap: 10px;
     font-size: var(--main-font-size);
     align-items: center;
-    height: 22px;
+    height: 38px;
 }
 
 .fa-info{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 50%;
     border: 1px solid var(--filter-bg-color);
     width: 24px;
     height: 24px;
+}
+
+.info-text{
+    padding-left: 35px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -514,5 +528,98 @@ footer{
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    main{
+        padding: 0 20px;
+    }
+
+    .main-container{
+        max-width: 768px;
+        padding: 0;
+    }
+
+    /*header*/
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        height: 115px;
+        margin-bottom: 30px;
+    }
+    .logo-container{
+        padding: 30px;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .header__nav li{
+        width:100%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .header__nav li:hover{
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    /*headline*/
+
+    .headline {
+        height: auto;
+    }
+
+    /*Search*/
+
+    .search-form{ 
+        border: 1px solid var(--main-bg-color);
+        width: 100%;
+        border-radius: 15px;
+        height:100%;
+    }
+
+    .search-form__btn{
+        position: absolute;
+        right: -1px;
+        top: -1px;
+        bottom: -1px;
+        width: 50px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .search-form__input{
+        width: 80%;
+        border: none;
+    }
+
+    .search-form__btn p{ 
+        display: none;
+        
+    }
+    .fa-magnifying-glass{
+        display: inline;
+    }
+
+    /*Filters*/
+
+    .filters__buttons{
+        width: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .filters__buttons--row1, .filters__buttons--row2{
+        width: 100%;
+    }
+
+    .filters__btn {
+        font-size: 1.4rem;
+        width: 50%;
+        flex-shrink: 1;
+    }
+
+
+    
 }
