@@ -2,8 +2,6 @@
 * {
     font-family: 'Raleway', sans-serif;
     text-rendering: optimizeLegibility;
-
-
 }
 
 html{
@@ -71,32 +69,35 @@ a {
 
 header{
     width: 100%;
-    max-width: 1440px;
     height: 79px;
     font-size: var(--main-font-size);
     display: flex;
     justify-content: space-between;
 }
+
 .logo-container{
     display: flex;
     align-items: center;
     height: 100%;
 }
+
 .logo{
     width: 61.09px;
     height: 19px;
     display: block;
 }
+
 .header__nav{
     width: 245px;
-    
 }
+
 .header__nav ul{
     display: flex;
     justify-content: space-between; 
     margin: auto;
     padding: 0;
 }
+
 .header__nav li{
     box-sizing: border-box;
     height: 35px;
@@ -104,6 +105,7 @@ header{
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .header__nav li:hover{
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
@@ -127,6 +129,8 @@ header{
     align-items: flex-start;
     height: 53px;
     gap: 8px;
+    width: 100%;
+    font-size: var(--main-font-size);
 }
 
 .headline__title, .headline__text {
@@ -180,15 +184,15 @@ header{
 
 .filters{
     display: flex;
-    height: 50px;
+    height: auto;
     align-items: center;
     gap: 15px;
-    height: 50px;
 }
 
 .filters__title{
     font-size: 1.8rem;
     font-weight: 700;
+    margin: 0;
 }
 
 .filters__buttons{
@@ -273,12 +277,10 @@ header{
     display: flex;
     gap: 30px;
     width: 100%;    
-    height: 100%;
 }
 
 .hebergements-link{
     width: 100%;
-    height: 100%;
 }
 
 .vertical-cards img {
@@ -293,16 +295,16 @@ header{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    box-sizing: border-box;
+    height: 100%; /*Makes all cards fit entire container even if one card grows due to text wrapping*/
+    box-sizing: border-box; /*Makes paddings fit inside .hebergements-link and .hebergements__cards--row1, .hebergements__cards--row2 */
 }
+
 .vertical-cards .card-content {
     width: 100%;
-    height: 83.25px;
     margin-top: 4px;
     padding-bottom: 15px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 
 .vertical-cards .card-title {
@@ -383,13 +385,14 @@ li{
 /****** Activités ***********/
 
 .activites{
+    margin-top:35px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 30px;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /*padding makes content go outside the width of 1440px if not set to box-sizing:border box*/
 }
 
 .activites__title{
@@ -411,7 +414,7 @@ li{
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    height: 439px;
+    height: 100%; /* Makes all cards grow at the same height i one has bigger text when screen is smaller*/
 }
 
 .big-activites-cards img{
@@ -464,6 +467,7 @@ footer{
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -493,6 +497,18 @@ footer{
 
     .populaires-cards .card-subtitle {
         font-size: 1.3rem; /* 13px */
+    }
+
+    /*Further modifications for medium devices*/
+
+    .filters{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .big-activites-cards img{
+        height: 200px;
     }
 }
 
