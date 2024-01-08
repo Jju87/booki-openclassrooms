@@ -1,7 +1,6 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    text-rendering: optimizeLegibility;
 }
 
 html{
@@ -22,7 +21,9 @@ html{
 body {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* No scrolling on X-axis for accessibility on*/
 }
 
 .main-container {
@@ -164,6 +165,7 @@ header{
     text-align: center;
     border: 1px solid var(--main-bg-color);
     border-right: none;
+    outline: none;
 }
 
 .search-form__input::placeholder{
@@ -262,7 +264,7 @@ header{
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 .hebergements-and-populaires section {
@@ -353,7 +355,7 @@ header{
 }
 
 .populaires-title i{
-    font-size: var(--main-font-size);
+    font-size: 2.2rem;
 }
 
 .populaires-cards .card {
@@ -515,6 +517,14 @@ footer{
 
     /*Further modifications for medium devices*/
 
+    .vertical-cards .card-title {
+        font-size: 1.4rem; /* I made the choice to follow initial codebase given for consistency purposes, but Figma model has different px on mobile version */ 
+    }
+
+    .vertical-cards .card-subtitle {
+        font-size: 1.3rem; /* I made the choice to follow initial codebase given for consistency purposes, but Figma model has different px on mobile version */ 
+    }
+
     .filters{
         flex-direction: column;
         align-items: flex-start;
@@ -524,13 +534,16 @@ footer{
     .big-activites-cards img{
         height: 200px;
     }
+
+    footer{
+        width: auto;
+        gap: 30px;
+    }
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    main{
-        padding: 0 20px;
-    }
 
     .main-container{
         max-width: 768px;
@@ -571,6 +584,15 @@ footer{
     }
 
     /*Search*/
+
+    .search-container{
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+
+    .search-form__input{
+        font-size: var(--main-font-size);
+    }
 
     .search-form{ 
         border: 1px solid var(--main-bg-color);
@@ -619,6 +641,52 @@ footer{
         width: 50%;
         flex-shrink: 1;
     }
+
+    /*Hébergements et populaires*/
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;   
+    }
+
+    .hebergements-and-populaires .hebergements { /* Class .hebergements selected for higher specificity */
+        background-color: #fff;
+    }
+
+    .hebergements__cards--row1, .hebergements__cards--row2{
+        flex-direction: column;
+    }
+
+    .populaires-cards{
+        flex-direction: column;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    /* Activites */
+
+    .activites__cards{
+        flex-direction: column;
+    }
+
+    /* Footer */
+
+    footer{
+        flex-direction: column;
+        gap: 10px; /* The Figma model asks for a 50px gap between footer-contents (20x padding + 20x padding + 10x gap = 50px) */
+    }
+
+    .footer-content{
+        width: 100%; 
+    }
+
+   
 
 
     
