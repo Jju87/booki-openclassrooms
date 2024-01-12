@@ -23,7 +23,7 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* No scrolling on X-axis for accessibility on*/
+    overflow-x: hidden; /* No scrolling on X-axis for smaller screen accessibility */
 }
 
 .main-container {
@@ -116,7 +116,7 @@ header{
 /****** Search Area ***********/
 
 .search-container{
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 35px;
@@ -180,7 +180,7 @@ header{
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 0%;
-    border: px solid var(--main-color)
+    border: 1px solid var(--main-color)
 }
 
 .fa-magnifying-glass{
@@ -311,8 +311,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    height: 100%; /*Makes all cards fit entire container even if one card grows due to text wrapping*/
-    box-sizing: border-box; /*Makes paddings fit inside .hebergements-link and .hebergements__cards--row1, .hebergements__cards--row2 */
+    height: 100%; /* Makes all cards fit container even if one card grows due to text wrapping */
+    box-sizing: border-box; /* Makes paddings fit inside .hebergements-link and .hebergements__cards--row1, .hebergements__cards--row2 */
 }
 
 .vertical-cards .card-content {
@@ -329,12 +329,12 @@ header{
 }
 
 .vertical-cards .card-subtitle {
-    margin:0;
+    margin: 0;
     margin-bottom: 8px;
     font-size: 1.4rem;
 }
 .vertical-cards .card-rating {
-    margin:0;
+    margin: 0;
     font-size: 1.4rem;
 }
 
@@ -616,7 +616,7 @@ footer{
         border: none;
     }
 
-    .search-form__btn p{ 
+    .search-form__btn span{ 
         display: none;
         
     }
