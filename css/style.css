@@ -229,6 +229,7 @@ header{
     align-items: center;
     gap: 10px;
     background-color: #fff;
+    white-space: nowrap;
 }
 
 .filters__btn:hover{
@@ -333,6 +334,7 @@ header{
     margin-bottom: 8px;
     font-size: 1.4rem;
 }
+
 .vertical-cards .card-rating {
     margin: 0;
     font-size: 1.4rem;
@@ -342,6 +344,7 @@ header{
     font-size: 1.8rem;
     font-weight: 700;
 }
+
 /****** Populaires ***********/
 
 .populaires {
@@ -419,6 +422,7 @@ li{
 .activites__link{
     width: 100%;
 }
+
 .activites__cards{
     display: flex;
     width: 100%;
@@ -458,10 +462,12 @@ footer{
     margin-top: 35px;
     
 }
+
 .footer-content{
     width: 33.33%;
     padding: 20px;
 }
+
 .footer-title{
     font-size: 1.8rem;
     font-weight: 700;
@@ -558,6 +564,7 @@ footer{
         height: 115px;
         margin-bottom: 30px;
     }
+
     .logo-container{
         padding: 30px;
     }
@@ -581,6 +588,18 @@ footer{
 
     .headline {
         height: auto;
+    }
+
+    .headline__title{
+        font-size: 2.2rem; 
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    .headline__text{
+        white-space: nowrap;
+        font-size: 1.6rem;
     }
 
     /*Search*/
@@ -639,7 +658,7 @@ footer{
     .filters__btn {
         font-size: 1.4rem;
         width: 50%;
-        flex-shrink: 1;
+        flex-shrink: 0;
     }
 
     /*Hébergements et populaires*/
@@ -686,8 +705,4 @@ footer{
         width: 100%; 
     }
 
-   
-
-
-    
 }
